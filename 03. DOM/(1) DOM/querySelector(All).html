@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <ol>
+            <li>HTML</li>
+            <li class='active'>CSS</li>
+            <li>JavaScript</li>
+        </ol>
+
+        <script>
+            //var li = document.querySelector('li'); // 'li' tag 의 가장 앞에 오는 첫번쨰 하나만 
+            var li = document.querySelectorAll('li');  //'li' tag all
+            for (var name in li){
+               li[name].style.color = 'red'; 
+            }
+            
+            var li = document.querySelector('.active');
+            li.style.color='blue';
+        </script>
+	</body>
+</html>

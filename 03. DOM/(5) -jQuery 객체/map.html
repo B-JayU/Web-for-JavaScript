@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>html</li>
+			<li>css</li>
+			<li>JavaScript</li>
+		</ul>
+
+		<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script>
+			var li = $('li'); // li 태그의 모든 element에 대해서
+			li.map(function(index, elem) {
+				console.log(index, elem);
+				$(elem).css('color', 'red');
+			})
+		</script>
+	</body>
+</html>

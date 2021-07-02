@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<a id="anchor" href="http://opentutorials.rog">opentutorials</a>
+		<!-- anchor : 다른 페이지로의 이동할 때 사용하는 태그 -->
+		<ul>
+			<li>HTML</li>
+			<li>CSS</li>
+			<li id="list">JavaScript</li>
+		</ul>
+		<input type="button" id="button" value="button" />
+		<script>
+			var target = document.getElementById('list');
+			console.log(target.constructor.name); // HTML LI Element
+
+			var target = document.getElementById('anchor');
+			console.log(target.constructor.name); // HTML Anchor Element
+
+			var target = document.getElementById('button');
+			console.log(target.constructor.name); // HTML Input Element
+
+			// why differ constructor's names
+			// 객체가 다르다는 것은 아래의 property가 다르다는 의미 => 이는 특성과 기능이 다르다는 의미
+			// 모든 HTML 내의 객체들은 HTMLElement를 상속한다.
+			
+		</script>
+	</body>
+</html>
