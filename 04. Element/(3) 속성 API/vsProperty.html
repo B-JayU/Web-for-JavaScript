@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p id="target">
+			Hello world!
+		</p>
+		<a id="target2" href="./vsProperty.html">html 파일</a>
+		<script>
+			var target = document.getElementById('target');
+			
+			// attribute 방식
+			target.setAttribute('class', 'important');
+			
+			// property 방식
+			// 실제 html 속성으 이름과 다른 이름을 갖는 경우가 있다.
+			target.className = 'important';
+
+			target = document.getElementById('target2');
+			console.log('target.href', target.href);
+
+			console.log('target.getAttribute("href")', target.getAttribute("href"));
+		</script>
+	</body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+	<ul>
+		<li>html</li>
+		<li>css</li>
+		<li id="active" class="important current">JavaScript</li>
+	</ul>
+	<script>
+		console.log(document.getElementById('active').tagName)
+		document.getElementById('active').tagName='a'; // Not excuted => .tagName => OnlyRead
+	</script>
+</html>

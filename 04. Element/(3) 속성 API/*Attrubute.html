@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<htlm>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<a id="target" href="http://www.naver.com">Naver</a>
+		<script>
+			var t = document.getElementById('target');
+			console.log(t.getAttribute('href'));
+			t.setAttribute('title', 'naver.com');
+			console.log(t.hasAttribute('title'));
+			t.removeAttribute('title');
+			console.log(t.hasAttribute('title'));
+		</script>
+	</body>
+</htlm>

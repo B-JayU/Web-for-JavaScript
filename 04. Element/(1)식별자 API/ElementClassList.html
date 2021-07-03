@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	
+	<body>
+		<ul>
+		<li>html</li>
+		<li>css</li>
+		<li id="active" class="important current">JavaScript</li>
+		</ul>
+
+		<script>
+		</script>
+
+		<input type="button" value="DOMTokenList" onclick="console.log(document.getElementById('active').classList);">
+		<input type="button" value="조회" onclick="loop();">
+		<input type="button" value="추가" onclick="document.getElementById('active').classList.add('marked');">
+		<input type="button" value="제거" onclick="document.getElementById('active').classList.remove('important');">
+		<input type="button" value="토글" onclick="document.getElementById('active').classList.toggle('current');">
+		<!-- toggle은 on/off 스위치와 같은 기능-->
+	</body>
+</html>
