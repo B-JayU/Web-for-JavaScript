@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javaScript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+		
+        <a id="t1" href="./prop.html">hello world</a>
+		<input id="t2" type="checkbox" checked="checked" />
+		<script>
+
+			var t1 = $('#t1');
+			console.log(t1.attr('href'));
+			console.log(t1.prop('href'));
+
+			var t2 = $('#t2');
+			console.log(t2.attr('checked'));
+			console.log(t2.prop('checked'));
+		</script>
+	</body>
+</html>

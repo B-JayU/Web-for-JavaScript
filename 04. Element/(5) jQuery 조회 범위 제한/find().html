@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li class="marked">html</li>
+			<li>css</li>
+			<li id="active">JavaScript
+				<ul>
+					<li>JavaScript Core</li>
+					<li class="marked">DOM</li>
+					<li class="marked">BOM</li>
+				</ul>
+			</li>
+		</ul>
+		<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script>
+			$('#active').find('.marked').css("color", "red");
+		</script>
+	</body>
+</html>
