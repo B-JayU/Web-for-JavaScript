@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body id="start"> 
+		<ul>
+			<li><a href="./532">html</a></li>
+			<li><a href="./533">CSS</a></li>
+			<li><a href="./534">JavaScript</a>
+				<ul>
+					<li><a href="./535">JavaScript Core</a></li>
+					<li><a href="./536">DOM</a></li>
+					<li><a href="./537">BOM</a></li>
+				</ul>
+			</li>
+		</ul>
+		<script>
+			function traverse(target, callback) {
+				
+				// target : element
+				// callback : call-back function
+
+				if (target.nodeType === 1){ // text는 element_node 가 아님
+					// nodeType 1 번은 ELEMENT_NODE를 의미함.
+					callback(target);
+					var c = target.childNodes;
+					for (var i = 0; i < c.length; i++) {
+						traverse(c[i], callback);
+					}				
+				}
+			}
+
+			traverse(document.getElementById('start'), function(elem){
+				// function(elem) : anonymous function
+				// elem : argument
+				// console.log(elem);
+				
+				if (elem.nodeName === 'LI'){
+					elem.style.backgroundColor = 'blue';
+				}
+			
+			});
+		</script>
+	</body>
+</html>

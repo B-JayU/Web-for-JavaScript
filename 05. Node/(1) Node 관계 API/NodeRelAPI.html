@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<!-- node type과 name을 이용해서 특정 element의 하위 element를 조회하면서 작업을 처리하는 함수만들기 -->
+	<body id="start"> 
+		<ul>
+			<li><a href="./532">html</a></li>
+			<li><a href="./533">CSS</a></li>
+			<li><a href="./534">JavaScript</a>
+				<ul>
+					<li><a href="./535">JavaScript Core</a></li>
+					<li><a href="./536">DOM</a></li>
+					<li><a href="./537">BOM</a></li>
+				</ul>
+			</li>
+		</ul>
+		<script>
+			var s = document.getElementById("start");
+			console.log(1, s.firstChild);
+			var ul = s.firstChild.nextSibling;
+			console.log(2, ul);
+			console.log(3, ul.nextSibiling);
+			console.log(4, ul.nextSibling.nextSibling);
+			console.log(5, ul.childNodes);
+			console.log(6, ul.childNodes[1]);
+			console.log(7, ul.parentNode);
+		</script>
+	</body>
+</html>
