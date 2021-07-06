@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<ul id="target">
+			JAvASCRIPT 
+			<li>HTML</li>
+			<li>CSS</li>
+		</ul>
+		<input type="button" onclick="get_inner();" value="getInner" />
+		<input type="button" onclick="set_inner();" value="setInner" />
+		<script>
+			function get_inner(){
+				var target = document.getElementById('target');
+				alert(target.innerText);
+			}
+			function set_inner(){
+				var target = document.getElementById('target');
+				target.innerText = "<li>JavaScript Core</li><li>BOM</li><li>DOM</li>"
+			}
+
+
+			// . innerHTML 은 대상 element 아래의 하위 자식들의 내용을 설정
+		</script>
+	</body>
+</html>
