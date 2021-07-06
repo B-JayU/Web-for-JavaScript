@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>HTML</li>
+			<li>CSS</li>
+			<li id="target">JavaScript</li>
+		</ul>
+
+		<input type="button" onclick="callRemoveChild();" value="removeChild()">
+
+		<script>
+			function callRemoveChild(){
+				var target = document.getElementById('target');
+				
+				var textC = target.text_NODE;
+				target.parentNode.removeChild(textC);
+				/*
+				var textC = target.lastChild;
+				target.removeChild(textC);
+				*/
+
+				//target.parentNode.removeChild(target);
+			
+			}
+			
+			/*
+			target.removeChild(텍스트노드에 대한 element); 자식태그로 있는 텍스트노드("JavaScript") 삭제
+			target.parentNode.removeChild(target); : id가 target인 태그 자체를 지움.
+			.removeChild()의 인자로 node 를 전달할 수 없음.
+			
+			*/
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javaScript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+		
+		<!-- remove : 선택된 엘리먼트를 제거 -->
+		<!-- empty : 선택된 엘리먼트의 텍스트 노드를 제거 -->
+		
+		<div class="target" id="target1"> 
+			target 1
+		</div>
+
+		<div class="target" id="target2">
+			target 2
+		</div>
+
+		<input type="button" value="remove target 1" id = "btn1" />
+		<input type="button" value="empty target 2" id = "btn2" />
+		
+		<script>
+			$('#btn1').click(function() {
+				$('#target1').remove();
+			})
+			$('#btn2').click(function() {
+				$('#target2').empty();
+			})
+		</script>
+	</body>
+</html>

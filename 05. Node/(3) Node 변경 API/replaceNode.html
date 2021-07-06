@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>HTML</li>
+			<li>CSS</li>
+			<li id="target">JavaScript</li>
+		</ul>
+
+		<input type="button" onclick="callReplaceChild();" value="replaceChild()">
+
+		<script>
+			var target = document.getElementById('target');
+			
+			function callReplaceChild() {
+				
+				// 교체하고자 새로운 element를 생성하고 설정하기
+				var a = document.createElement('a');
+				a.setAttribute('href', 'http://opentutorials.org/module/904/6701');
+				a.appendChild(document.createTextNode('Web browser JavaScript'));
+
+				// 교체 되는 대상을 찾고, 그 대상의 첫번째 자식을  새로운 element로 교체한다.
+				var target = document.getElementById('target');
+				target.replaceChild(a, target.firstChild);
+				// jQuery 노드 변경 API에서 replaceAll 과 유사함.
+				// 교체의 대상이 되는 element가 뒤에 온다.
+			}
+			
+			
+
+		</script>
+	</body>
+</html>

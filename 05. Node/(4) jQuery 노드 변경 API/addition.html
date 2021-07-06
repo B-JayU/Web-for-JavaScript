@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<div class="target">
+			content1
+		</div>
+
+		<div class="target">
+			content2
+		</div>
+
+		<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script>
+			$('.target').before('<div>before</div>');
+			$('.target').after('<div>after</div>');
+			$('.target').prepend('<div>prepend</div>');
+			$('.target').append('<div>append</div>');
+			
+			/* 	
+				class는 두 개이상의 태그에서 동일한 값을 가질 수 있으므로
+				$('.target') : class가 target인 모든 태그에 동일하게 적용된다. 
+			*/
+		
+		</script>
+	</body>
+</html>
