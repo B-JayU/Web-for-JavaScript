@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			#targetMani{
+				font-size:77px;
+				font-family:georgia;
+				border-bottom:1px solid black;
+				padding-bottom:10px;
+			}
+			p.mani{
+				margin:5px;
+			}
+		</style>
+	</head>
+	<body>
+		<p id="target1"><span>Hello world</span></p>
+		<p id="target2">
+			<span>Hello world</span>
+		</p>
+		<script src="text.js"></script>
+		<hr>
+
+		<h2> 값 API</h2>
+		<p>
+			텍스트 노드는 DOM에서 실질적인 데이터가 저장되는 객체이다. 따라서 텍스트 노드에는 값과 과련된 여러 기능들이 있는데 이번 시간에는
+			값을 가져오는 두개의 API를 알아본다.
+			
+			<ul>
+				<li> nodeValue </li>
+				<li> data </li>
+			</ul>
+		</p>
+		<hr>
+
+		<ul>
+			<li id="target">html</li>
+			<li>css</li>
+			<li>JavaScript</li>
+		</ul>
+		<script src="valueAPI.js"></script>
+		<hr>
+
+		<h2> 조작 API </h2>
+		<p>
+			텍스트 노드가 상속 받은 CharacterData 객체는 문자를 제어할 수 있는 다양한 API를 제공한다. 아래는 조작과 관련된 API들의 목록이다.
+			<ul>
+				<li>appendData()</li>
+				<li>deleteData()</li>
+				<li>insertData()</li>
+				<li>replaceData()</li>
+				<li>substringData()</li>
+			</ul>
+		</p>
+		<hr>
+		
+		<p id="targetMani"> Cording everybody! </p>
+		<p class="mani"> data : <input type="text" id="datasource" value="JavaScript" /></p>
+		<p class ="mani">	start : <input type="text" id="start" value="5" /></p>
+		<p class="mani"> end : <input type="text" id="end" value="5" /></p>
+
+		<script src="manipulateAPI.js"></script>
+		<p class="mani"><input type="button" value="appendData(data)" onclick="callAppendData()" />
+			<input type="button" value="deleteData(start, data)" onclick="callDeleteData()" />	
+			<input type="button" value="insertData(start,data)" onclick="callInsertData()" />
+			<input type="button" value="replaceData(start, end, data)" onclick="callReplaceData()" />
+			<input type="button" value="substringData(start, data)" onclick="callSubstringData()" />
+		</p>
+
+		
+	</body>
+</html>
