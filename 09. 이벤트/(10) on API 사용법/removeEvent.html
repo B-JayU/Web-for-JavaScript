@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style></style>
+	</head>
+	<body>
+		<input type="text" id="target"></textarea>
+		<input id="remove" type="button" value="remove" />
+		<p id="status"></p>
+		<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script>
+			var handler = function(e){
+				$('#status').text(e.type+Math.random());
+			};
+			$('#target').on('focus blur', handler)
+			/* $('#target').on('focus', function(e){
+				alert('focused');
+			});
+			*/
+			
+			$('#remove').on('click', function(e){
+				$('#target').off('focus', handler);
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<sytle></sytle>
+	</head>
+	<body>
+		<input type="text" id="target">
+		<p id="status"></p>
+		<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script>
+			var handler = function(e){
+				$('#status').html(e.type);
+			}
+
+			var handler2 = function(e){
+				$('#status').html("text 변경이 감지되었습니다.");
+			}
+			$('#target').on('click', handler).on('blur', handler).on('change', handler2);
+			
+			/*
+			$('#target').on(
+				{
+					'focus':handler,
+					'blur':handler,
+					'change':handler2
+				}
+			)
+			*/
+
+			/*
+			 $('#target').on('focus blur change', function(e){
+				$('#status').html(e.type);
+			})
+			*/
+		</script>
+	</body>
+</html>
